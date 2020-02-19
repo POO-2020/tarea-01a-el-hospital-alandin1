@@ -3,11 +3,13 @@ import Tiempo from "./tiempo.js"
 
 class Main {
     pruebaFecha () {
-        let fecha = new Fecha(17, 2, 2020);
+        let fecha = new Fecha(15,2,2021);
         console.log(fecha.getAños());
         console.log(fecha.getMeses());
         console.log(fecha.getSemanas());
         console.log(fecha.getDias());
+        console.log(fecha.getFecha());
+        console.log(fecha.getDiaFecha());
     }
 
     pruebaTiempo(){
