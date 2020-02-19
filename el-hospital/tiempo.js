@@ -6,7 +6,12 @@ export default class Tiempo {
     }
     
     getFormato12() {
-        return `${this.hora}:${this.minutos} ${this.periodo}`;
+        if(this.periodo === "pm" && this.hora>12){
+        return `${this.hora - 12}:${this.minutos} ${this.periodo}`;
+        }
+        else{
+            return `${this.hora}:${this.minutos} ${this.periodo}`
+        }
     }
 
     getFormato24() {

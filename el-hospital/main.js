@@ -13,14 +13,18 @@ class Main {
     }
 
     pruebaTiempo(){
-        let hora = new Tiempo(2, 24, "pm");
+        let hora = new Tiempo(16, 24, "pm");
         console.log(hora.getFormato12());
         console.log(hora.getFormato24());
     }
-   
+
+    pruebaNombre(){
+
+    }
 } 
 
     let app = new Main();
 
     app.pruebaFecha();
     app.pruebaTiempo();
+    app.pruebaNombre();

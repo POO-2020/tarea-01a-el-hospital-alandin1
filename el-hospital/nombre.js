@@ -6,7 +6,7 @@ export default class Nombre {
     }
 
     getNombreCompleto(){
-
+        
     }
 
     getApellidoNombre(){
