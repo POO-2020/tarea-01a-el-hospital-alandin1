@@ -1,48 +1,23 @@
 export default class Fecha {
-    /**
-     * @param {number} dia Valor entre 1 y 31
-     * @param {number} mes Valor entre 1 y 12
-     */
-    constructor (dia, mes){
-        this.fecha = new Date(dia, mes -1)
-        this.diaSemana = [
-            "Domingo",
-            "Lunes",
-            "Martes",
-            "Miércoles",
-            "Jueves",
-            "viernes",
-            "Sábado"
-        ];  
-        this.nombreMes = 
-            ["enero", 
-            "febrero", 
-            "marzo", 
-            "abril", 
-            "mayo", 
-            "junio", 
-            "julio",
-            "agosto",
-            "septiembre",
-            "octubre",
-            "noviembre",
-            "diciembre"]
+    constructor(dia, mes, año) {
+        this.fecha = new Date(año, mes, dia);
     }
 
     getAños(){
-
+        let result = new Date(Date.now()).getFullYear() - this.fecha.getFullYear(); 
+        return result;
     }
 
     getMeses(){
-
+        return this.getAños() * 12;
     }
 
     getSemanas(){
-
+        return this.getMeses() * 4;
     }
-    
-    getDias(){
 
+    getDias(){
+        return this.getSemanas() * 7;
     }
 
     getFecha(){
