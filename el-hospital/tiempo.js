@@ -6,17 +6,22 @@ export default class Tiempo {
     }
     
     getFormato12() {
-        if(this.periodo === "pm" && this.hora>12){
+        if(this.periodo === "am" && this.hora==12){
+            return `${this.hora - 12}:${this.minutos} ${this.periodo}`;
+        }
+        else if(this.periodo === "pm" && this.hora>12){
         return `${this.hora - 12}:${this.minutos} ${this.periodo}`;
         }
         else{
             return `${this.hora}:${this.minutos} ${this.periodo}`
         }
     }
-
     getFormato24() {
         let hora = this.hora;
-        if(this.periodo === "pm"){
+        if(this.periodo === "am" && this.hora==12){
+            return `${this.hora - 12}:${this.minutos} ${this.periodo}`;
+        }
+        else if(this.periodo === "pm" && this.hora<12){
             hora = hora + 12
         return `${hora}:${this.minutos} ${this.periodo}`;
         }
