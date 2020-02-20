@@ -17,7 +17,7 @@ class Main {
     }
 
     pruebaTiempo(){
-        let hora = new Tiempo(12, 24, "pm");
+        let hora = new Tiempo(6, 24, "pm");
         console.log(hora.getFormato12());
         console.log(hora.getFormato24());
     }
