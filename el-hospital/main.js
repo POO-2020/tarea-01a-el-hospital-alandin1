@@ -1,5 +1,6 @@
 import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
+import Nombre from "./nombre.js";
 
 class Main {
     pruebaFecha () {
@@ -19,7 +20,10 @@ class Main {
     }
 
     pruebaNombre(){
-
+        let nombre = new Nombre("Ana", "Landín", "López");
+        console.log(nombre.getNombreCompleto());
+        console.log(nombre.getApellidoNombre());
+        console.log(nombre.getIniciales());
     }
 } 
 

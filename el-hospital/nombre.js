@@ -5,21 +5,22 @@ export default class Nombre {
      * @param {string} aMaterno Apellido Materno
      * @param {string} aPaterno Apellido Paterno
      */
-    constructor(nombre, aMaterno, aPaterno){
+    constructor(nombre, aPaterno, aMaterno){
         this.nombre = nombre;
+        this.aPaterno = aPaterno
         this.aMaterno = aMaterno;
-        this.aPaterno = aPaterno;
+        ;
     }
 
     getNombreCompleto(){
-        return `${this.nombre} ${this.aMaterno} ${this.aPaterno}`
+        return `${this.nombre} ${this.aPaterno} ${this.aMaterno}`
     }
 
     getApellidoNombre(){
-        return `${this.aMaterno} ${this.aPaterno} ${this.nombre}`
+        return `${this.aPaterno} ${this.aMaterno} ${this.nombre}`
     }
 
     getIniciales(){
-        
+        return `${this.nombre.charAt(0)}${this.aPaterno.charAt(0)}${this.aMaterno.charAt(0)}`
     }
 }
