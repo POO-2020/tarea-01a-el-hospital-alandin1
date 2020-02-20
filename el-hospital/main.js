@@ -1,6 +1,7 @@
 import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
 import Nombre from "./nombre.js";
+import Paciente from "./paciente.js"
 
 class Main {
     pruebaFecha () {
@@ -25,6 +26,11 @@ class Main {
         console.log(nombre.getApellidoNombre());
         console.log(nombre.getIniciales());
     }
+
+    pruebaPaciente(){
+        let paciente = new Paciente(new Nombre("Ana", "Landín", "López"), new Fecha(15,5,2001), 3123045861);
+        console.log(paciente.getPerfil());
+    }
 } 
 
     let app = new Main();
@@ -32,3 +38,4 @@ class Main {
     app.pruebaFecha();
     app.pruebaTiempo();
     app.pruebaNombre();
+    app.pruebaPaciente();
