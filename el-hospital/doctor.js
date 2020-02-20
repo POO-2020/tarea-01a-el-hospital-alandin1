@@ -17,6 +17,6 @@ export default class Doctor {
     }
 
     getPerfil(){
-        return `${this.cedula} ${this.especialidad}, ${this.nombre}, ${this.telefono}`;
+        return `${this.cedula} ${this.especialidad}, ${this.nombre.getNombreCompleto()}, ${this.telefono}`;
     }
 }
